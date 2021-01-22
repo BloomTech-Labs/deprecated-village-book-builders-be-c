@@ -20,9 +20,12 @@ const swaggerUIOptions = {
 
 //###[  Routers ]###
 const indexRouter = require('./index/indexRouter');
-const profileRouter = require('./profile/profileRouter');
-const dsRouter = require('./dsService/dsRouter');
-
+const userRouter = require('./users/userRouter');
+const libraryRouter = require('./libraries/libraryRouter');
+const villageRouter = require('./villages/villageRouter');
+const schoolRouter = require('./schools/schoolRouter');
+const headmasterRouter = require('./headmasters/headmasterRouter');
+const menteeRouter = require('./mentees/menteeRouter');
 const app = express();
 
 process.on('unhandledRejection', (reason, p) => {
@@ -47,11 +50,21 @@ app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// app.use(function(req, res, next) {
+//   if (!req.headers.authorization) {
+//     return res.status(403).json({ error: 'No credentials sent!' });
+//   }
+//   next();
+// })
+
 // application routes
 app.use('/', indexRouter);
-app.use(['/profile', '/profiles'], profileRouter);
-app.use('/data', dsRouter);
-
+app.use('/users', userRouter);
+app.use('/library', libraryRouter);
+app.use('/village', villageRouter);
+app.use('/school', schoolRouter);
+app.use('/headmaster', headmasterRouter);
+app.use('/mentee', menteeRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
