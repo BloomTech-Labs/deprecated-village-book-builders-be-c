@@ -2,9 +2,9 @@ const express = require('express');
 const Headmasters = require('./headmasterModel');
 const router = express.Router();
 // const restrictTo = require('../auth/restrictTo')
-const authenicate = require('../auth/authenticate-middleware');
+// const authenicate = require('../auth/authenticate-middleware');
 
-router.get('/', authenicate, function (req, res) {
+router.get('/', function (req, res) {
   Headmasters.findAll()
     .then((headmasters) => {
       res.status(200).json(headmasters);
@@ -15,7 +15,7 @@ router.get('/', authenicate, function (req, res) {
     });
 });
 
-router.get('/:id', authenicate, function (req, res) {
+router.get('/:id', function (req, res) {
   const id = String(req.params.id);
   Headmasters.findById(id)
     .then((headmaster) => {
@@ -30,7 +30,7 @@ router.get('/:id', authenicate, function (req, res) {
     });
 });
 
-router.post('/', authenicate, async (req, res) => {
+router.post('/', async (req, res) => {
   const headmaster = req.body;
   if (headmaster) {
     const id = headmaster.id || 0;
@@ -57,7 +57,7 @@ router.post('/', authenicate, async (req, res) => {
   }
 });
 
-router.put('/:id', authenicate, (req, res) => {
+router.put('/:id', (req, res) => {
   const headmaster = req.body;
   if (headmaster) {
     const id = headmaster.id || 0;
@@ -85,7 +85,7 @@ router.put('/:id', authenicate, (req, res) => {
   }
 });
 
-router.delete('/:id', authenicate, (req, res) => {
+router.delete('/:id', (req, res) => {
   const id = req.params.id;
   try {
     Headmasters.findById(id).then((headmaster) => {

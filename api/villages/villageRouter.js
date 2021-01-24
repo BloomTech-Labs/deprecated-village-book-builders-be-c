@@ -1,10 +1,10 @@
 const express = require('express');
 const Villages = require('./villageModel');
 const router = express.Router();
-// const restrictTo = require('../auth/restrictTo')
-const authenicate = require('../auth/authenticate-middleware');
+// // const restrictTo = require('../auth/restrictTo')
+// const authenicate = require('../auth/authenticate-middleware');
 
-router.get('/', authenicate, function (req, res) {
+router.get('/', function (req, res) {
   Villages.findAll()
     .then((villages) => {
       res.status(200).json(villages);
@@ -15,7 +15,7 @@ router.get('/', authenicate, function (req, res) {
     });
 });
 
-router.get('/:id', authenicate, function (req, res) {
+router.get('/:id', function (req, res) {
   const id = String(req.params.id);
   Villages.findById(id)
     .then((village) => {
@@ -30,7 +30,7 @@ router.get('/:id', authenicate, function (req, res) {
     });
 });
 
-router.post('/', authenicate, async (req, res) => {
+router.post('/', async (req, res) => {
   const village = req.body;
   if (village) {
     const id = village.id || 0;
@@ -56,7 +56,7 @@ router.post('/', authenicate, async (req, res) => {
   }
 });
 
-router.put('/:id', authenicate, (req, res) => {
+router.put('/:id', (req, res) => {
   const village = req.body;
   if (village) {
     const id = village.id || 0;
@@ -84,7 +84,7 @@ router.put('/:id', authenicate, (req, res) => {
   }
 });
 
-router.delete('/:id', authenicate, (req, res) => {
+router.delete('/:id', (req, res) => {
   const id = req.params.id;
   try {
     Villages.findById(id).then((village) => {
