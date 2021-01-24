@@ -43,7 +43,7 @@ app.use(helmet());
 app.use(express.json());
 app.use(
   cors({
-    origin: '*',
+    origin: true,
   })
 );
 app.use(logger('dev'));

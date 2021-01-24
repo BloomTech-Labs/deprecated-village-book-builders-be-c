@@ -3,18 +3,18 @@
   before granting access to the next middleware/route handler
 
 */
-
+const jwt_decode = require('jwt-decode');
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = '12345';
 module.exports = async (req, res, next) => {
-  console.log(req);
-  const token = await req.get('authorization');
-  console.log(token);
+  const authHeader = await req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+  var decoded = jwt_decode(token);
+  console.log(decoded);
   if (token) {
-    jwt.verify(token, JWT_SECRET, (err, decodedToken) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
       if (err) {
         // token is invalid
-        res.status(401).json({ you: "Cant't touch this!" });
+        res.status(401).json({ error: err });
       } else {
         // token is valid
         req.jwt = decodedToken;

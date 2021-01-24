@@ -13,49 +13,43 @@ exports.seed = function(knex) {
           role: 'admin'
         },
         {
-          id: 2,
+          id: 1,
           email: 'bruno@email.com',
           password: 'password',
           role: 'admin'
         },
         {
-          id: 3,
-          email: 'Keagan.Thiel@yahoo.com',
-          password: 'password',
-          role: 'admin'
-        },
-        {
-          id: 4,
+          id: 2,
           email: 'headmaster@headmaster.com',
           password: 'password',
           role: 'headmaster'
         },
         {
-          id: 5,
+          id: 3,
           email: 'varun@vbb.com',
           password: 'password',
           role: 'headmaster'
         },
         {
-          id: 6,
+          id: 4,
           email: 'Isadore37@hotmail.com',
           password: 'password',
           role: 'headmaster'
         },
         {
-          id: 7,
+          id: 5,
           email: 'Reid.Gorczany@hotmail.com',
           password: 'password',
           role: 'headmaster'
         },
         {
-          id: 8,
+          id: 6,
           email: 'mentees@mentees.com',
           password: 'password',
           role: 'mentee'
         },
         {
-          id: 9,
+          id: 7,
           email: 'Pearlie.Dibbert@hotmail.com',
           password: 'password',
           role: 'mentee'
