@@ -26,6 +26,7 @@ const villageRouter = require('./villages/villageRouter');
 const schoolRouter = require('./schools/schoolRouter');
 const headmasterRouter = require('./headmasters/headmasterRouter');
 const menteeRouter = require('./mentees/menteeRouter');
+const mentorRouter = require('./mentors/mentorRouter');
 const app = express();
 
 process.on('unhandledRejection', (reason, p) => {
@@ -65,6 +66,7 @@ app.use('/village', villageRouter);
 app.use('/school', schoolRouter);
 app.use('/headmaster', headmasterRouter);
 app.use('/mentee', menteeRouter);
+app.use('/mentor', mentorRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
