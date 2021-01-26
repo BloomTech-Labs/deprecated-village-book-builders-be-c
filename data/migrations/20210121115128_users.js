@@ -1,13 +1,10 @@
-exports.up = function(knex) {
-    return knex.schema.createTable('users', users => {
-      users.increments();
-  
-      users
-        .string('email', 255)
-        .notNullable()
-        .unique();
-      users.string('password', 255).notNullable();
-      users
+exports.up = function (knex) {
+  return knex.schema.createTable('users', (users) => {
+    users.increments();
+
+    users.string('email', 255).notNullable().unique();
+    users.string('password', 255).notNullable();
+    users
       .enu('role', [
         'admin',
         'headmaster',
@@ -15,13 +12,13 @@ exports.up = function(knex) {
         'student',
         'mentor',
         'mentee',
-        'program'
+        'program',
+        'guest',
       ])
       .notNullable();
-    });
-  };
-  
-  exports.down = function(knex, Promise) {
-    return knex.schema.dropTableIfExists('users');
-  };
-  
+  });
+};
+
+exports.down = function (knex, Promise) {
+  return knex.schema.dropTableIfExists('users');
+};
