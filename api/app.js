@@ -55,7 +55,7 @@ app.use(cookieParser());
 // app.use(function(req, res, next) {
 //   if (!req.headers.authorization) {
 //     return res.status(403).json({ error: 'No credentials sent!' });
-//   }
+//   } backup
 //   next();
 // })
 
