@@ -1,6 +1,8 @@
 const express = require('express');
 const Mentees = require('./menteeModel');
 const router = express.Router();
+const User = require('../users/userModel');
+const bcrypt = require('bcryptjs');
 // // const restrictTo = require('../auth/restrictTo')
 // const authenicate = require('../auth/authenticate-middleware');
 
@@ -33,16 +35,31 @@ router.get('/:id', function (req, res) {
 router.post('/', async (req, res) => {
   const mentee = req.body;
   if (mentee) {
-    const id = mentee.id || 0;
+    const userId = await User.getMaxId();
+    const menteeId = await Mentees.getMaxId();
+    const password = bcrypt.hashSync(mentee.password, 10);
+    const newUser = {
+      id: userId[0].max + 1,
+      email: mentee.email,
+      password,
+      role: 'mentee',
+    };
+    const newMentee = {
+      id: menteeId[0].max + 1,
+      email: mentee.email,
+      first_name: mentee['first_name'],
+      last_name: mentee['last_name'],
+      primary_language: mentee['primary_language'],
+      dob: mentee.dob,
+    };
+
     try {
-      await Mentees.findById(id).then(async (pf) => {
-        if (pf == undefined) {
-          //mentee not found so lets insert it
-          await Mentees.create(mentee).then((mentee) =>
-            res
-              .status(200)
-              .json({ message: 'mentee created', mentee: mentee[0] })
-          );
+      await Mentees.findBy({ email: mentee.email }).then(async (pf) => {
+        if (!pf.length) {
+          // mentee not found so lets insert it
+          await User.create(newUser);
+          const saveMentee = await Mentees.create(newMentee);
+          res.status(200).json({ message: 'mentee created', saveMentee });
         } else {
           res.status(400).json({ message: 'mentee already exists' });
         }
