@@ -25,6 +25,8 @@ const remove = async (id) => {
   return await db('users').where({ id }).del();
 };
 
+const getMaxId = async () => await db('users').max('id');
+
 const findOrCreateProfile = async (profileObj) => {
   const foundProfile = await findById(profileObj.id).then((profile) => profile);
   if (foundProfile) {
@@ -44,4 +46,5 @@ module.exports = {
   update,
   remove,
   findOrCreateProfile,
+  getMaxId,
 };

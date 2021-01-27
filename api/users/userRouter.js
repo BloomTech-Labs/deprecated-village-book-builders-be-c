@@ -21,12 +21,14 @@ router.post('/register', async (req, res, next) => {
     if (req.body) {
       const { email, password, role } = req.body;
       const hashedPassword = await bcrypt.hashSync(password, 10);
-      const user = {
+      const maxId = await User.getMaxId();
+      const newUser = {
+        id: maxId[0].max + 1,
         email,
         password: hashedPassword,
         role,
       };
-      await User.create(user);
+      await User.create(newUser);
       res.status(201).json({ message: `${email} added` });
     }
   } catch (err) {
