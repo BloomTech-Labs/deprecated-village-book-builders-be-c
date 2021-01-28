@@ -1,3 +1,4 @@
+
 {
   "name": "labs-api-starter",
   "version": "1.0.0",
@@ -6,7 +7,7 @@
   "repository": "github:Lambda-School-Labs/labs-api-starter",
   "scripts": {
     "start": "node server.js",
-    "watch:dev": "nodemon",
+    "watch:dev": "nodemon server.js",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
     "format": "npx prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md)\"",
