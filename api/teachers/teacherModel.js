@@ -18,7 +18,11 @@ const create = async (profile) => {
 
 const update = (id, profile) => {
   console.log(profile);
-  return db('teachers').where({ id }).update(profile).returning('*');
+  return db('teachers')
+    .where({ id: id })
+    .first()
+    .update(profile)
+    .returning('*');
 };
 
 const remove = async (id) => {
