@@ -8,7 +8,7 @@ const User = require('./userModel');
 router.get('/', (req, res) => {
   User.findAll()
     .then((users) => {
-      res.status(200).json(users);
+      res.status(200).json(users.data);
     })
     .catch((err) => {
       console.log(err);
