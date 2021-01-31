@@ -75,6 +75,12 @@ exports.seed = function (knex) {
             '$2a$10$cPhoz4m8iWvtzI.ji4oPOeSAn7qWBiChM4AjhbdSQ7jiZj6sB.JZG',
           role: 'mentor',
         },
+        {
+          id: 10,
+          email: 'library@library.com',
+          password: null,
+          role: 'library'
+        }
       ]);
     });
 };

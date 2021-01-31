@@ -16,6 +16,35 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/library', (req, res) => {
+  User.findBy({ role: 'library' })
+    .then((user) => {
+      res.status(200).json(user);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: `Server err: ${err}` });
+    });
+});
+
+router.post('/library', async (req, res, next) => {
+  try {
+    const { email } = req.body;
+    const maxId = await User.getMaxId();
+    const id = maxId[0].max + 1;
+    const password = bcrypt.hashSync('password', 10);
+
+    if (!req.body.email) {
+      res.status(401).json({ message: 'Email field missing' });
+    } else {
+      const newUser = { id, role: 'library', email, password };
+      await User.create(newUser);
+      res.status(201).json({ message: 'New library user created' });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
+
 router.post('/register', async (req, res, next) => {
   try {
     if (req.body) {

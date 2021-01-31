@@ -14,6 +14,7 @@ exports.up = function (knex) {
         'mentee',
         'program',
         'guest',
+        'library'
       ])
       .notNullable();
   });
