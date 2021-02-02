@@ -33,20 +33,13 @@ router.get('/:id', function (req, res) {
 router.post('/', async (req, res) => {
   const library = req.body;
   if (library) {
-    const id = library.id || 0;
     try {
-      await Libraries.findById(id).then(async (pf) => {
-        if (pf == undefined) {
-          //library not found so lets insert it
-          await Libraries.create(library).then((library) =>
-            res
-              .status(200)
-              .json({ message: 'library created', library: library[0] })
-          );
-        } else {
-          res.status(400).json({ message: 'library already exists' });
-        }
-      });
+      //library not found so lets insert it
+      await Libraries.create(library).then((library) =>
+        res
+          .status(200)
+          .json({ message: 'library created', library: library[0] })
+      );
     } catch (e) {
       console.error(e);
       res.status(500).json({ message: e.message });
