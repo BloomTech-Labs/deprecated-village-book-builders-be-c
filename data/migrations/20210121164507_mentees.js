@@ -8,6 +8,7 @@ exports.up = function(knex) {
         mentee.string('email', 510)
         mentee.string('primary_language',510);
         mentee.string('dob',510);
+        mentee.boolean('active').notNullable().defaultTo(0)
         mentee.string('mentee_picture', 510);
         mentee.string('english_lvl',510);
         mentee.string('math_lvl',510);

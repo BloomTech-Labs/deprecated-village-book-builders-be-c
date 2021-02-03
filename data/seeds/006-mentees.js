@@ -8,6 +8,7 @@ exports.seed = function(knex) {
         [
           {
             id: 0,
+            active:true,
             first_name: 'Samanta',
             last_name: 'Emard',
             gender: 'Other',
@@ -81,6 +82,7 @@ exports.seed = function(knex) {
           },
           {
             id: 1,
+            active:true,
             first_name: 'Dax',
             last_name: 'Murray',
             gender: 'Male',
@@ -154,6 +156,7 @@ exports.seed = function(knex) {
           },
           {
             id: 2,
+            active:true,
             first_name: 'Clair',
             last_name: 'Witting',
             gender: 'Male',
@@ -227,6 +230,7 @@ exports.seed = function(knex) {
           },
           {
             id: 3,
+            active:true,
             first_name: 'Javon',
             last_name: 'Johnston',
             gender: 'Male',
@@ -300,6 +304,7 @@ exports.seed = function(knex) {
           },
           {
             id: 4,
+            active:true,
             first_name: 'Florida',
             last_name: 'McDermott',
             gender: 'Other',
@@ -373,6 +378,7 @@ exports.seed = function(knex) {
           },
           {
             id: 5,
+            active:true,
             first_name: 'Esther',
             last_name: 'Predovic',
             gender: 'Female',
@@ -446,6 +452,7 @@ exports.seed = function(knex) {
           },
           {
             id: 6,
+            active:true,
             first_name: 'Blanche',
             last_name: 'Raynor',
             gender: 'Other',
@@ -519,6 +526,7 @@ exports.seed = function(knex) {
           },
           {
             id: 7,
+            active:true,
             first_name: 'Elna',
             last_name: 'Doyle',
             gender: 'Other',
@@ -592,6 +600,7 @@ exports.seed = function(knex) {
           },
           {
             id: 8,
+            active:false,
             first_name: 'Ava',
             last_name: 'Schowalter',
             gender: 'Female',
@@ -665,6 +674,7 @@ exports.seed = function(knex) {
           },
           {
             id: 9,
+            active:false,
             first_name: 'Rosamond',
             last_name: 'Cremin',
             gender: 'Other',
@@ -738,6 +748,7 @@ exports.seed = function(knex) {
           },
           {
             id: 10,
+            active:false,
             first_name: 'Marjory',
             last_name: 'Kutch',
             gender: 'Female',
@@ -811,6 +822,7 @@ exports.seed = function(knex) {
           },
           {
             id: 11,
+            active:false,
             first_name: 'Sierra',
             last_name: 'Herman',
             gender: 'Male',
@@ -884,6 +896,7 @@ exports.seed = function(knex) {
           },
           {
             id: 12,
+            active:false,
             first_name: 'Ashly',
             last_name: 'Bogisich',
             gender: 'Male',
@@ -957,6 +970,7 @@ exports.seed = function(knex) {
           },
           {
             id: 13,
+            active:false,
             first_name: 'Jaylon',
             last_name: 'Kertzmann',
             gender: 'Other',
@@ -1030,6 +1044,7 @@ exports.seed = function(knex) {
           },
           {
             id: 14,
+            active:false,
             first_name: 'Laurel',
             last_name: 'Wolff',
             gender: 'Female',
@@ -1103,6 +1118,7 @@ exports.seed = function(knex) {
           },
           {
             id: 15,
+            active:false,
             first_name: 'Thad',
             last_name: 'Runolfsson',
             gender: 'Female',
@@ -1176,6 +1192,7 @@ exports.seed = function(knex) {
           },
           {
             id: 16,
+            active:false,
             first_name: 'Francisco',
             last_name: 'Beatty',
             gender: 'Male',
@@ -1249,6 +1266,7 @@ exports.seed = function(knex) {
           },
           {
             id: 17,
+            active:false,
             first_name: 'Mitchell',
             last_name: 'Spencer',
             gender: 'Other',
@@ -1322,6 +1340,7 @@ exports.seed = function(knex) {
           },
           {
             id: 18,
+            active:false,
             first_name: 'Maxine',
             last_name: 'Bins',
             gender: 'Other',
@@ -1395,6 +1414,7 @@ exports.seed = function(knex) {
           },
           {
             id: 19,
+            active:false,
             first_name: 'Charley',
             last_name: 'Barrows',
             gender: 'Male',
@@ -1468,6 +1488,7 @@ exports.seed = function(knex) {
           },
           {
             id: 20,
+            active:false,
             first_name: 'Max',
             last_name: 'OConner',
             gender: 'Female',
@@ -1541,6 +1562,7 @@ exports.seed = function(knex) {
           },
           {
             id: 21,
+            active:false,
             first_name: 'Macy',
             last_name: 'Orn',
             gender: 'Female',
@@ -1614,6 +1636,7 @@ exports.seed = function(knex) {
           },
           {
             id: 22,
+            active:false,
             first_name: 'Savanna',
             last_name: 'Powlowski',
             gender: 'Female',
@@ -1687,6 +1710,7 @@ exports.seed = function(knex) {
           },
           {
             id: 23,
+            active:false,
             first_name: 'Juanita',
             last_name: 'Pacocha',
             gender: 'Other',
@@ -1760,6 +1784,7 @@ exports.seed = function(knex) {
           },
           {
             id: 24,
+            active:false,
             first_name: 'Mia',
             last_name: 'Brakus',
             gender: 'Male',
@@ -1833,6 +1858,7 @@ exports.seed = function(knex) {
           },
           {
             id: 25,
+            active:false,
             first_name: 'Zella',
             last_name: 'Larson',
             gender: 'Male',
@@ -1906,6 +1932,7 @@ exports.seed = function(knex) {
           },
           {
             id: 26,
+            active:false,
             first_name: 'Ellie',
             last_name: 'Hansen',
             gender: 'Female',
@@ -1979,6 +2006,7 @@ exports.seed = function(knex) {
           },
           {
             id: 27,
+            active:false,
             first_name: 'Clemens',
             last_name: 'Schaefer',
             gender: 'Male',
@@ -2052,6 +2080,7 @@ exports.seed = function(knex) {
           },
           {
             id: 28,
+            active:false,
             first_name: 'Waldo',
             last_name: 'Waters',
             gender: 'Other',
@@ -2125,6 +2154,7 @@ exports.seed = function(knex) {
           },
           {
             id: 29,
+            active:false,
             first_name: 'Mercedes',
             last_name: 'Padberg',
             gender: 'Male',
@@ -2198,6 +2228,7 @@ exports.seed = function(knex) {
           },
           {
             id: 30,
+            active:false,
             first_name: 'Kyla',
             last_name: 'Krajcik',
             gender: 'Other',
@@ -2271,6 +2302,7 @@ exports.seed = function(knex) {
           },
           {
             id: 31,
+            active:false,
             first_name: 'Astrid',
             last_name: 'Volkman',
             gender: 'Female',
@@ -2344,6 +2376,7 @@ exports.seed = function(knex) {
           },
           {
             id: 32,
+            active:false,
             first_name: 'Frank',
             last_name: 'Hansen',
             gender: 'Male',
@@ -2417,6 +2450,7 @@ exports.seed = function(knex) {
           },
           {
             id: 33,
+            active:false,
             first_name: 'Catherine',
             last_name: 'Herzog',
             gender: 'Other',
@@ -2490,6 +2524,7 @@ exports.seed = function(knex) {
           },
           {
             id: 34,
+            active:false,
             first_name: 'Reta',
             last_name: 'West',
             gender: 'Other',
@@ -2563,6 +2598,7 @@ exports.seed = function(knex) {
           },
           {
             id: 35,
+            active:false,
             first_name: 'Brad',
             last_name: 'Pfannerstill',
             gender: 'Male',
@@ -2636,6 +2672,7 @@ exports.seed = function(knex) {
           },
           {
             id: 36,
+            active:false,
             first_name: 'Ana',
             last_name: 'Borer',
             gender: 'Other',
@@ -2709,6 +2746,7 @@ exports.seed = function(knex) {
           },
           {
             id: 37,
+            active:false,
             first_name: 'Bailee',
             last_name: 'Bogisich',
             gender: 'Other',
@@ -2782,6 +2820,7 @@ exports.seed = function(knex) {
           },
           {
             id: 38,
+            active:false,
             first_name: 'Llewellyn',
             last_name: 'Mann',
             gender: 'Female',
@@ -2855,6 +2894,7 @@ exports.seed = function(knex) {
           },
           {
             id: 39,
+            active:false,
             first_name: 'Bryce',
             last_name: 'Hilpert',
             gender: 'Male',
@@ -2928,6 +2968,7 @@ exports.seed = function(knex) {
           },
           {
             id: 40,
+            active:false,
             first_name: 'Enrico',
             last_name: 'Waelchi',
             gender: 'Other',
@@ -3001,6 +3042,7 @@ exports.seed = function(knex) {
           },
           {
             id: 41,
+            active:false,
             first_name: 'Ansley',
             last_name: 'Wisozk',
             gender: 'Other',
@@ -3074,6 +3116,7 @@ exports.seed = function(knex) {
           },
           {
             id: 42,
+            active:false,
             first_name: 'Barrett',
             last_name: 'Prohaska',
             gender: 'Female',
@@ -3147,6 +3190,7 @@ exports.seed = function(knex) {
           },
           {
             id: 43,
+            active:false,
             first_name: 'Eldon',
             last_name: 'Herzog',
             gender: 'Male',
@@ -3220,6 +3264,7 @@ exports.seed = function(knex) {
           },
           {
             id: 44,
+            active:false,
             first_name: 'Leo',
             last_name: 'Haag',
             gender: 'Male',
@@ -3293,6 +3338,7 @@ exports.seed = function(knex) {
           },
           {
             id: 45,
+            active:false,
             first_name: 'Adalberto',
             last_name: 'Armstrong',
             gender: 'Male',
@@ -3366,6 +3412,7 @@ exports.seed = function(knex) {
           },
           {
             id: 46,
+            active:false,
             first_name: 'Dulce',
             last_name: 'Grimes',
             gender: 'Male',
@@ -3439,6 +3486,7 @@ exports.seed = function(knex) {
           },
           {
             id: 47,
+            active:false,
             first_name: 'Shaniya',
             last_name: 'Schmitt',
             gender: 'Female',
@@ -3512,6 +3560,7 @@ exports.seed = function(knex) {
           },
           {
             id: 48,
+            active:false,
             first_name: 'Leopold',
             last_name: 'OReilly',
             gender: 'Male',
@@ -3585,6 +3634,7 @@ exports.seed = function(knex) {
           },
           {
             id: 49,
+            active:false,
             first_name: 'Gideon',
             last_name: 'Ebert',
             gender: 'Male',
@@ -3658,6 +3708,7 @@ exports.seed = function(knex) {
           },
           {
             id: 50,
+            active:false,
             first_name: 'Noel',
             last_name: 'Thompson',
             gender: 'Male',
@@ -3731,6 +3782,7 @@ exports.seed = function(knex) {
           },
           {
             id: 51,
+            active:false,
             first_name: 'Nakia',
             last_name: 'Williamson',
             gender: 'Male',
@@ -3804,6 +3856,7 @@ exports.seed = function(knex) {
           },
           {
             id: 52,
+            active:false,
             first_name: 'Cynthia',
             last_name: 'Oberbrunner',
             gender: 'Male',
@@ -3877,6 +3930,7 @@ exports.seed = function(knex) {
           },
           {
             id: 53,
+            active:false,
             first_name: 'Lottie',
             last_name: 'Schmidt',
             gender: 'Male',
@@ -3950,6 +4004,7 @@ exports.seed = function(knex) {
           },
           {
             id: 54,
+            active:false,
             first_name: 'Jayme',
             last_name: 'Dickens',
             gender: 'Female',
@@ -4023,6 +4078,7 @@ exports.seed = function(knex) {
           },
           {
             id: 55,
+            active:false,
             first_name: 'Robbie',
             last_name: 'Hermann',
             gender: 'Female',
@@ -4096,6 +4152,7 @@ exports.seed = function(knex) {
           },
           {
             id: 56,
+            active:false,
             first_name: 'Lauriane',
             last_name: 'Balistreri',
             gender: 'Male',
@@ -4169,6 +4226,7 @@ exports.seed = function(knex) {
           },
           {
             id: 57,
+            active:false,
             first_name: 'Imogene',
             last_name: 'Gerhold',
             gender: 'Male',
@@ -4242,6 +4300,7 @@ exports.seed = function(knex) {
           },
           {
             id: 58,
+            active:false,
             first_name: 'Raven',
             last_name: 'Powlowski',
             gender: 'Female',
@@ -4315,6 +4374,7 @@ exports.seed = function(knex) {
           },
           {
             id: 59,
+            active:false,
             first_name: 'Bette',
             last_name: 'Sanford',
             gender: 'Male',
@@ -4388,6 +4448,7 @@ exports.seed = function(knex) {
           },
           {
             id: 60,
+            active:false,
             first_name: 'Tamia',
             last_name: 'Langworth',
             gender: 'Other',
