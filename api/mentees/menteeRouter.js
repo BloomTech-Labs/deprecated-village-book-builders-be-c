@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', (req, res) => {
   const mentee = req.body;
   if (mentee) {
-    const id = mentee.id || 0;
+    const id = req.params.id;
     Mentees.findById(id)
       .then(
         Mentees.update(id, mentee)
